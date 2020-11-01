@@ -1,5 +1,11 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-test1 = pd.read_csv('newcode02.csv', names=['PRO1Gender', 'PRO2City', 'PRO3Age'])
-print(test1.groupby('PRO2City').PRO1Gender.sum())
+data = pd.read_csv('newcode02.csv',index_col='Item')
+#print(data.head(10))
+gender = data.groupby('PRO1Gender')
+city = data.groupby('PRO2City')
+#print(type(gender))
+#print(gender.size())
+#print(city.size())
+gender.get_group(1).head
