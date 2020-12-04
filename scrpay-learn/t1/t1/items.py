@@ -14,5 +14,5 @@ class nbaItem(scrapy.Item):
     author = scrapy.Field()
     title = scrapy.Field()
     time = scrapy.Field()
-    text = scrapy.Field()
+    num = scrapy.Field()
     pass
